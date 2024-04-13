@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Saira:ital,wght@0,100..900;1,100..900&family=Yarndings+12&display=swap');
+
+:root {
+  --bg: #134074;
+  --fg:#0B2545;
+  --text: #FCF7F8;
+  --accent: #E03616;
+
+  --red: #D72638;
+  --green: #5DD39E;
+}
+
+* {
+  color: var(--text);
+  font-family: "Saira", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  font-variation-settings:"width" 100;
+}
+
+.text_green {
+  color: green;
+}
+
+.text_red {
+  color: red;
+}
+
+a {
+  text-decoration: none;
+
+  color: var(--accent);
+
+
+  width: 100%;
+}
+
+a:hover {
+}
+
+.border {
+  border: var(--accent) solid 2px;
+  border-radius: 10px;
+}
