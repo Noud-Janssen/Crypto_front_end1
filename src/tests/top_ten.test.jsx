@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { render, screen } from "@testing-library/react";
+import { render, screen, fireEvent } from "@testing-library/react";
 import userEvent from '@testing-library/user-event'
 
 import Top_Ten from "../components/top_ten";
@@ -18,7 +18,7 @@ describe("Component: top_ten", () => {
     );
 
   });
-  it('Button select by price', () => {
+  it('Button select by market cap', () => {
     
     render(
       <BrowserRouter>
@@ -26,8 +26,10 @@ describe("Component: top_ten", () => {
       </BrowserRouter>
     )
 
-    screen.debug();
+    const button = screen.getByTestId("top_ten_market_cap");
 
-    userEvent.click(screen.getByTestId("top_ten_market_cap"))
+    fireEvent.click(button);
+
+    expect(screen.getByTestId("test_result_select").classList.contains("cap")).true;
   });
 });

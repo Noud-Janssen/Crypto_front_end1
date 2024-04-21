@@ -88,7 +88,7 @@ function Top_Ten() {
       </div>
       <div className="top_ten">
         <h1>Top 10</h1>
-        <div className="button_row">
+        <div data-testid="test_result_select" className={"button_row " + topTenState}>
           <button data-testid="top_ten_market_cap" onClick={top_ten_cap}>Market Cap</button>
           <button data-testid="top_ten_price" onClick={top_ten_price}>Price</button>
           <button data-testid="top_ten_rise" onClick={top_ten_rise}>Change</button>
